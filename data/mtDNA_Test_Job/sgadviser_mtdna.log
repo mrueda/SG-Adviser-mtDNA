@@ -1,0 +1,118 @@
+Extracting Mitochondrial DNA from exome BAM file...
+/var/www/mtdna/data/mtDNA_Test_Job/HG00119-DNA_MIT.bam
+Analyzing mitochondrial DNA with MToolBox...
+
+setting up MToolBox environment variables...
+...done
+
+setting up MToolBox variables in config file ...
+...done
+
+
+Check python version... (2.7 required)
+OK.
+
+Checking files to be used in MToolBox execution...
+
+Checking mapExome parameters...
+OK.
+
+Checking assembleMTgenome parameters...
+OK.
+
+Checking mt-classifier parameters...
+OK.
+Input type is bam.
+
+Converting bam to fastq... HG00119-DNA_MIT.bam
+Done.
+
+##### EXECUTING READ MAPPING WITH MAPEXOME...
+
+mapExome for sample HG00119-DNA_MIT, files found: HG00119-DNA_MIT.R1.fastq HG00119-DNA_MIT.R2.fastq HG00119-DNA_MIT.fastq
+HG00119-DNA_MIT.fastq is an empty unpaired fastq. File has been removed.
+Mapping onto mtDNA...
+/pro/NGSutils/MToolBox-master/bin/gmap/bin/gsnap -D /media/mrueda/2TB/genomes/gmapdb -d chrRSRS -A sam --nofails --pairmax-dna=500 --query-unk-mismatch=1 --read-group-id=sample --read-group-name=sample --read-group-library=sample --read-group-platform=sample -n 1 -Q -O -t 4 HG00119-DNA_MIT.R1.fastq HG00119-DNA_MIT.R2.fastq > OUT_HG00119-DNA_MIT/outmt.sam 2> OUT_HG00119-DNA_MIT/logmt.txt
+Extracting FASTQ from SAM...
+Mapping onto complete human genome...single reads
+Mapping onto complete human genome...pair reads
+Reading Results...
+Filtering reads...
+Outfile saved on OUT_HG00119-DNA_MIT/OUT.sam.
+Done.
+
+Compression of fastq files from bam/sam input files...
+Done.
+
+SAM files post-processing...
+
+##### SORTING OUT.sam FILES WITH PICARDTOOLS...
+
+Success.
+
+Skip Indel Realigner...
+
+##### ELIMINATING PCR DUPLICATES WITH PICARDTOOLS MARKDUPLICATES...
+
+
+##### ASSEMBLING MT GENOMES WITH ASSEMBLEMTGENOME...
+
+WARNING: values of tail < 5 are deprecated and will be replaced with 5
+
+
+##### GENERATING VCF OUTPUT...
+Reference sequence used for VCF: RSRS
+
+##### PREDICTING HAPLOGROUPS AND ANNOTATING/PRIORITIZING VARIANTS...
+
+Haplogroup predictions based on RSRS Phylotree build 16
+Your best results file is  mt_classification_best_results.csv
+
+Loading contig sequences from file HG00119-DNA_MIT-contigs.fasta
+Loaded 1 contig sequences
+
+Aligning Contigs to mtDNA reference genome...
+
+______________________________
+**** Deleting SNP: 3107d
+
+Sequence haplogroup assignment
+
+Classification according to tree: /pro/NGSutils/MToolBox-master/MToolBox/data/phylotree_r16.pickle
+genome_state is  incomplete
+OrderedDict([('T1a1_152', (51, 53, 53)), ('T1', (51, 53, 53)), ('T1a1', (51, 53, 53))])
+====================
+I'm looking for T1a1_152
+I'm looking for T1
+I'm looking for T1a1
+------------------------------
+Contig alignment to MHCS and rCRS
+Aligning contigs to MHCS SeqDiff object
+______________________________
+**** Deleting SNP: 3107d
+rCRS SeqDiff object
+______________________________
+**** Deleting SNP: 3107d
+Merging seq_diffs...
+Writing results for sequence HG00119-DNA_MIT
+Success.
+
+Parsing pathogenicity table...
+Parsing variability data...
+Parsing info about haplogroup-defining sites...
+Parsing info about haplogroup assignments...
+/var/www/mtdna/data/mtDNA_Test_Job/OUT_HG00119-DNA_MIT/HG00119-DNA_MIT_merged_diff.csv
+Parsing variant data for sample HG00119-DNA_MIT...
+Best haplogroup predictions for sample HG00119-DNA_MIT : ['T1a1_152', 'T1', 'T1a1']
+Functional annotation for haplogroup T1a1_152
+Functional annotation for haplogroup T1
+Functional annotation for haplogroup T1a1
+Success.
+
+
+Prioritization analysis done.
+
+
+Analysis completed!
+Appending Heteroplasmic Fraction to the output...
+All done!!!

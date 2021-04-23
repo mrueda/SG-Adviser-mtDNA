@@ -1,0 +1,157 @@
+qseek started for www-data on mrueda-ws1 at Fri Jan 13 14:39:01 PST 2017.
+Starting job 1 on queue mtdna
+Process 1 on queue mtdna gives 256 at Fri Jan 13 14:39:01 PST 2017
+for user www-data job /var/www/mtdna/data/148434703877790/job_x_148434703877790.sh
+qseek started for www-data on mrueda-ws1 at Fri Jan 13 14:54:12 PST 2017.
+Starting job 2 on queue mtdna
+Process 2 on queue mtdna gives 256 at Fri Jan 13 14:54:12 PST 2017
+for user www-data job /var/www/mtdna/data/148434805203617/job_x_148434805203617.sh
+Starting job 3 on queue mtdna
+Process 3 on queue mtdna gives 256 at Fri Jan 13 14:57:52 PST 2017
+for user www-data job /var/www/mtdna/data/148434827103985/job_x_148434827103985.sh
+Starting job 4 on queue mtdna
+Process 4 on queue mtdna gives 256 at Fri Jan 13 14:58:46 PST 2017
+for user www-data job /var/www/mtdna/data/148434832504236/job_x_148434832504236.sh
+Starting job 5 on queue mtdna
+Process 5 on queue mtdna gives 256 at Fri Jan 13 14:58:54 PST 2017
+for user www-data job /var/www/mtdna/data/148434833304465/job_x_148434833304465.sh
+Starting job 6 on queue mtdna
+Process 6 on queue mtdna gives 0 at Fri Jan 13 15:01:20 PST 2017
+for user www-data job /var/www/mtdna/data/148434848005064/job_x_148434848005064.sh
+Starting job 7 on queue mtdna
+Running job 7 for /var/www/mtdna/data/148434870805971/job_x_148434870805971.sh killed
+on queue mtdna at Fri Jan 13 15:13:41 PST 2017.
+Starting job 8 on queue mtdna
+Running job 8 for /var/www/mtdna/data/148434872506070/job_x_148434872506070.sh killed
+on queue mtdna at Fri Jan 13 15:13:52 PST 2017.
+Starting job 9 on queue mtdna
+Process 9 on queue mtdna gives 256 at Fri Jan 13 15:19:51 PST 2017
+for user www-data job /var/www/mtdna/data/148434925606796/job_x_148434925606796.sh
+Starting job 10 on queue mtdna
+Process 10 on queue mtdna gives 256 at Fri Jan 13 15:29:03 PST 2017
+for user www-data job /var/www/mtdna/data/testi/job_x_testi.sh
+qseek started for www-data on mrueda-ws1 at Fri Jan 13 15:43:30 PST 2017.
+Starting job 11 on queue mtdna
+Starting job 12 on queue mtdna
+Job 13 for /var/www/mtdna/data/148435100903493/job_x_148435100903493.sh deleted on queue mtdna at Fri Jan 13 15:44:15 PST 2017.
+Process 11 on queue mtdna gives 256 at Fri Jan 13 15:43:30 PST 2017
+for user www-data job /var/www/mtdna/data/148435056209052/job_x_148435056209052.sh
+Starting job 14 on queue mtdna
+Process 12 on queue mtdna gives 256 at Fri Jan 13 15:43:34 PST 2017
+for user www-data job /var/www/mtdna/data/148435078609358/job_x_148435078609358.sh
+Starting job 15 on queue mtdna
+Process 15 on queue mtdna gives 256 at Fri Jan 13 15:53:02 PST 2017
+for user www-data job /var/www/mtdna/data/148435157604169/job_x_148435157604169.sh
+Process 14 on queue mtdna gives 256 at Fri Jan 13 15:52:58 PST 2017
+for user www-data job /var/www/mtdna/data/148435154603958/job_x_148435154603958.sh
+Starting job 16 on queue mtdna
+Process 16 on queue mtdna gives 256 at Fri Jan 13 15:59:54 PST 2017
+for user www-data job /var/www/mtdna/data/test/job_x_test.sh
+qseek started for www-data on  at Fri Jan 13 16:10:46 PST 2017.
+Host name www-data incorrect.
+qseek started for www-data on mrueda-ws1 at Fri Jan 13 16:21:48 PST 2017.
+Starting job 17 on queue mtdna
+Process 17 on queue mtdna gives 256 at Fri Jan 13 16:21:48 PST 2017
+for user www-data job /var/www/mtdna/data/148435330803466/job_x_148435330803466.sh
+Starting job 18 on queue mtdna
+Process 18 on queue mtdna gives 256 at Sun Jan 15 08:03:48 PST 2017
+for user www-data job /var/www/mtdna/data/148449622781963/job_x_148449622781963.sh
+Starting job 19 on queue mtdna
+Starting job 20 on queue mtdna
+Process 20 on queue mtdna gives 256 at Sun Jan 15 08:08:50 PST 2017
+for user www-data job /var/www/mtdna/data/148449652882356/job_x_148449652882356.sh
+Starting job 21 on queue mtdna
+Process 19 on queue mtdna gives 256 at Sun Jan 15 08:05:26 PST 2017
+for user www-data job /var/www/mtdna/data/148449632482137/job_x_148449632482137.sh
+Starting job 22 on queue mtdna
+qseek started for www-data on mrueda-ws1 at Sun Jan 15 09:14:20 PST 2017.
+Process 21 on queue mtdna gives 256 at Sun Jan 15 08:58:05 PST 2017
+for user www-data job /var/www/mtdna/data/148449948583533/job_x_148449948583533.sh
+Starting job 23 on queue mtdna
+Process 22 on queue mtdna gives 256 at Sun Jan 15 09:12:03 PST 2017
+for user www-data job /var/www/mtdna/data/148449954483648/job_x_148449954483648.sh
+Process 23 on queue mtdna gives 256 at Sun Jan 15 09:32:30 PST 2017
+for user www-data job /var/www/mtdna/data/148450046084349/job_x_148450046084349.sh
+Starting job 24 on queue mtdna
+Starting job 25 on queue mtdna
+Process 25 on queue mtdna gives 256 at Mon Jan 16 14:09:59 PST 2017
+for user www-data job /var/www/mtdna/data/mtDNA_Test_Job/job_x_mtDNA_Test_Job.sh
+Process 24 on queue mtdna gives 256 at Mon Jan 16 14:09:41 PST 2017
+for user www-data job /var/www/mtdna/data/148460457943661/job_x_148460457943661.sh
+Starting job 26 on queue mtdna
+Process 26 on queue mtdna gives 256 at Mon Jan 23 14:18:12 PST 2017
+for user www-data job /var/www/mtdna/data/148520989089794/job_x_148520989089794.sh
+Starting job 27 on queue mtdna
+Starting job 28 on queue mtdna
+Process 27 on queue mtdna gives 256 at Mon Jan 23 15:18:05 PST 2017
+for user www-data job /var/www/mtdna/data/148521348391393/job_x_148521348391393.sh
+Starting job 29 on queue mtdna
+Process 28 on queue mtdna gives 256 at Mon Jan 23 15:25:31 PST 2017
+for user www-data job /var/www/mtdna/data/148521392991715/job_x_148521392991715.sh
+Starting job 30 on queue mtdna
+Process 29 on queue mtdna gives 256 at Mon Jan 23 16:04:51 PST 2017
+for user www-data job /var/www/mtdna/data/148521397491819/job_x_148521397491819.sh
+Starting job 31 on queue mtdna
+Process 30 on queue mtdna gives 256 at Mon Jan 23 16:11:59 PST 2017
+for user www-data job /var/www/mtdna/data/148521401091838/job_x_148521401091838.sh
+Starting job 32 on queue mtdna
+Process 31 on queue mtdna gives 256 at Mon Jan 23 16:23:49 PST 2017
+for user www-data job /var/www/mtdna/data/148521405291857/job_x_148521405291857.sh
+Starting job 33 on queue mtdna
+Process 32 on queue mtdna gives 256 at Mon Jan 23 16:34:25 PST 2017
+for user www-data job /var/www/mtdna/data/148521406791876/job_x_148521406791876.sh
+Starting job 34 on queue mtdna
+Process 33 on queue mtdna gives 256 at Mon Jan 23 16:45:55 PST 2017
+for user www-data job /var/www/mtdna/data/test2_mrueda/job_x_test2_mrueda.sh
+Starting job 35 on queue mtdna
+Process 34 on queue mtdna gives 256 at Mon Jan 23 16:56:25 PST 2017
+for user www-data job /var/www/mtdna/data/test9_mrueda/job_x_test9_mrueda.sh
+Starting job 36 on queue mtdna
+Process 35 on queue mtdna gives 256 at Mon Jan 23 17:07:59 PST 2017
+for user www-data job /var/www/mtdna/data/148521484893598/job_x_148521484893598.sh
+Starting job 37 on queue mtdna
+Process 36 on queue mtdna gives 256 at Mon Jan 23 17:16:55 PST 2017
+for user www-data job /var/www/mtdna/data/LP6005830_DNA_A01.bam/job_x_LP6005830_DNA_A01.bam.sh
+Process 37 on queue mtdna gives 256 at Mon Jan 23 17:45:12 PST 2017
+for user www-data job /var/www/mtdna/data/LP6005830_DNA_A01/job_x_LP6005830_DNA_A01.sh
+Starting job 38 on queue mtdna
+Starting job 39 on queue mtdna
+Running job 38 for /var/www/mtdna/data/148527633214823/job_x_148527633214823.sh killed
+on queue mtdna at Tue Jan 24 09:09:09 PST 2017.
+Running job 39 for /var/www/mtdna/data/148527689815189/job_148527689815189.sh killed
+on queue mtdna at Tue Jan 24 09:22:43 PST 2017.
+qseek started for www-data on mrueda-ws1 at Tue Feb  7 14:54:42 PST 2017.
+Starting job 40 on queue mtdna
+Process 40 on queue mtdna gives 256 at Tue Feb  7 14:54:42 PST 2017
+for user www-data job /var/www/mtdna/data/148650808138517/job_x_148650808138517.sh
+qseek started for www-data on mrueda-ws1 at Thu Apr 27 15:55:28 PDT 2017.
+Starting job 41 on queue mtdna
+Process 41 on queue mtdna gives 256 at Thu Apr 27 15:55:28 PDT 2017
+for user www-data job /var/www/mtdna/data/149333372725183/job_x_149333372725183.sh
+Starting job 42 on queue mtdna
+Process 42 on queue mtdna gives 256 at Fri May 12 15:17:37 PDT 2017
+for user www-data job /var/www/mtdna/data/file_bam/job_x_file_bam.sh
+Starting job 43 on queue mtdna
+Process 43 on queue mtdna gives 256 at Wed May 17 16:41:18 PDT 2017
+for user www-data job /var/www/mtdna/data/149506447789054/job_x_149506447789054.sh
+Starting job 44 on queue mtdna
+Starting job 45 on queue mtdna
+Process 44 on queue mtdna gives 0 at Wed May 17 17:08:44 PDT 2017
+for user www-data job /var/www/mtdna/data/test_SAM/job_x_test_SAM.sh
+Process 45 on queue mtdna gives 0 at Wed May 17 17:19:58 PDT 2017
+for user www-data job /var/www/mtdna/data/test_SAM2/job_x_test_SAM2.sh
+Starting job 46 on queue mtdna
+Process 46 on queue mtdna gives 256 at Thu Jun  1 09:17:56 PDT 2017
+for user www-data job /var/www/mtdna/data/149633387517070/job_x_149633387517070.sh
+Starting job 47 on queue mtdna
+Process 47 on queue mtdna gives 256 at Thu Jun  1 09:18:16 PDT 2017
+for user www-data job /var/www/mtdna/data/149633389417123/job_x_149633389417123.sh
+Starting job 48 on queue mtdna
+Process 48 on queue mtdna gives 256 at Thu Jun  1 09:27:28 PDT 2017
+for user www-data job /var/www/mtdna/data/149633444717570/job_x_149633444717570.sh
+Starting job 49 on queue mtdna
+Process 49 on queue mtdna gives 0 at Thu Jun  1 09:33:42 PDT 2017
+for user www-data job /var/www/mtdna/data/149633482117975/job_x_149633482117975.sh
+Starting job 50 on queue mtdna
+Process 50 on queue mtdna gives 0 at Thu Jun  1 09:56:20 PDT 2017
+for user www-data job /var/www/mtdna/data/149633618019166/job_x_149633618019166.sh

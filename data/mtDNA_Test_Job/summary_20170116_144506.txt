@@ -1,0 +1,18 @@
+Selected input format	bam
+Reference sequence chosen for mtDNA read mapping	RSRS
+Reference sequence used for haplogroup prediction	RSRS
+Duplicate read removal?	true
+Local realignment around known indels?	false
+Minimum distance of indels from read end	5
+Heteroplasmy threshold for FASTA consensus sequence	0.8
+
+WARNING: If minimum distance of indels from read end set < 5, it has been replaced with 5
+
+==============================
+
+Sample	mtDNA Coverage	Per base depth	Best predicted haplogroup(s)	N. of homoplasmic variants	N. of heteroplasmic variants HF>=0.8	N. of heteroplasmic variants HF<0.8	N. of variants	N. of prioritized variants
+HG00119-DNA_MIT	100.0000	938.238	T1a1_152;T1;T1a1	93	69	99	106	38
+
+==============================
+
+Total number of prioritized variants	38

@@ -1,0 +1,34 @@
+[Mon Jan 16 14:09:59 PST 2017] net.sf.picard.sam.SamToFastq INPUT=HG00119-DNA_MIT.bam FASTQ=HG00119-DNA_MIT.R1.fastq SECOND_END_FASTQ=HG00119-DNA_MIT.R2.fastq UNPAIRED_FASTQ=HG00119-DNA_MIT.fastq TMP_DIR=[/var/www/mtdna/data/mtDNA_Test_Job/tmp] VALIDATION_STRINGENCY=SILENT    OUTPUT_PER_RG=false RE_REVERSE=true INTERLEAVE=false INCLUDE_NON_PF_READS=false READ1_TRIM=0 READ2_TRIM=0 INCLUDE_NON_PRIMARY_ALIGNMENTS=false VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Jan 16 14:09:59 PST 2017] Executing as www-data@mrueda-ws1 on Linux 3.13.0-37-generic amd64; OpenJDK 64-Bit Server VM 1.7.0_79-b14; Picard version: 1.108(1695) JdkDeflater
+[Mon Jan 16 14:10:02 PST 2017] net.sf.picard.sam.SamToFastq done. Elapsed time: 0.04 minutes.
+Runtime.totalMemory()=888143872
+[Mon Jan 16 14:44:01 PST 2017] net.sf.picard.sam.SortSam INPUT=OUT.sam OUTPUT=OUT.sam.bam SORT_ORDER=coordinate TMP_DIR=[/var/www/mtdna/data/mtDNA_Test_Job/OUT_HG00119-DNA_MIT/tmp]    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Jan 16 14:44:01 PST 2017] Executing as www-data@mrueda-ws1 on Linux 3.13.0-37-generic amd64; OpenJDK 64-Bit Server VM 1.7.0_79-b14; Picard version: 1.98(1547)
+INFO	2017-01-16 14:44:05	SortSam	Finished reading inputs, merging and writing to output now.
+[Mon Jan 16 14:44:08 PST 2017] net.sf.picard.sam.SortSam done. Elapsed time: 0.11 minutes.
+Runtime.totalMemory()=1233649664
+[Mon Jan 16 14:44:09 PST 2017] net.sf.picard.sam.MarkDuplicates INPUT=[OUT.realigned.bam] OUTPUT=OUT.sam.bam.marked.bam METRICS_FILE=OUT.sam.bam.metrics.txt REMOVE_DUPLICATES=true ASSUME_SORTED=true TMP_DIR=[/var/www/mtdna/data/mtDNA_Test_Job/OUT_HG00119-DNA_MIT/tmp]    PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Jan 16 14:44:09 PST 2017] Executing as www-data@mrueda-ws1 on Linux 3.13.0-37-generic amd64; OpenJDK 64-Bit Server VM 1.7.0_79-b14; Picard version: 1.98(1547)
+INFO	2017-01-16 14:44:09	MarkDuplicates	Start of doWork freeMemory: 500296312; totalMemory: 503840768; maxMemory: 3817865216
+INFO	2017-01-16 14:44:09	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2017-01-16 14:44:09	MarkDuplicates	Will retain up to 15150258 data points before spilling to disk.
+WARNING	2017-01-16 14:44:09	AbstractDuplicateFindingAlgorithm	Default READ_NAME_REGEX '[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*' did not match read name 'SRR099967.100409949'.  You may need to specify a READ_NAME_REGEX in order to correctly identify optical duplicates.  Note that this message will not be emitted again even if other read names do not match the regex.
+INFO	2017-01-16 14:44:10	MarkDuplicates	Read 348144 records. 0 pairs never matched.
+INFO	2017-01-16 14:44:10	MarkDuplicates	After buildSortedReadEndLists freeMemory: 735147056; totalMemory: 900202496; maxMemory: 3817865216
+INFO	2017-01-16 14:44:10	MarkDuplicates	Will retain up to 119308288 duplicate indices before spilling to disk.
+INFO	2017-01-16 14:44:10	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2017-01-16 14:44:11	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2017-01-16 14:44:11	MarkDuplicates	Sorting list of duplicate records.
+INFO	2017-01-16 14:44:11	MarkDuplicates	After generateDuplicateIndexes freeMemory: 889857288; totalMemory: 1854930944; maxMemory: 3817865216
+INFO	2017-01-16 14:44:11	MarkDuplicates	Marking 91817 records as duplicates.
+INFO	2017-01-16 14:44:11	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2017-01-16 14:44:13	MarkDuplicates	Before output close freeMemory: 1844021904; totalMemory: 1854930944; maxMemory: 3817865216
+INFO	2017-01-16 14:44:13	MarkDuplicates	After output close freeMemory: 2372134688; totalMemory: 2393374720; maxMemory: 3817865216
+[Mon Jan 16 14:44:13 PST 2017] net.sf.picard.sam.MarkDuplicates done. Elapsed time: 0.08 minutes.
+Runtime.totalMemory()=2393374720
+[Mon Jan 16 14:44:13 PST 2017] net.sf.picard.sam.SamFormatConverter INPUT=OUT.sam.bam.marked.bam OUTPUT=OUT.sam.bam.marked.bam.marked.sam TMP_DIR=[/var/www/mtdna/data/mtDNA_Test_Job/OUT_HG00119-DNA_MIT/tmp]    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Mon Jan 16 14:44:13 PST 2017] Executing as www-data@mrueda-ws1 on Linux 3.13.0-37-generic amd64; OpenJDK 64-Bit Server VM 1.7.0_79-b14; Picard version: 1.98(1547)
+[Mon Jan 16 14:44:15 PST 2017] net.sf.picard.sam.SamFormatConverter done. Elapsed time: 0.03 minutes.
+Runtime.totalMemory()=880803840
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000

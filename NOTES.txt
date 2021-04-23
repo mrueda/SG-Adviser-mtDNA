@@ -1,0 +1,73 @@
+- If mtDNA-server.pl fails check that the optional paramaters div is not deactivated via jquery in js/main.js
+- If sqs fails empty files
+  data/.sqs/
+sqs.queue.debug*
+sqs.pid.www-data*
+
+- After Perl upgrade 'endform' in CGI.pm needs to be 'end_form' otherwise you will get bareword error
+
+setfacl -b /media/mrueda in order to have access to user 'www-data'
+Make sure that www-data has access to all files spread around (media/mrueda/2TB/genomes)
+http://serverfault.com/questions/272551/how-do-you-give-execute-permissions-to-apache2-user-and-not-to-everyone-else
+
+$ groups www-data
+www-data : www-data mrueda
+
+user apache has no login shell (/sbin/nologin) in /etc/passwd)
+su -s /bin/sh apache -c "whoami"
+or change it in /etc/passwd
+
+SElinux in CentOs7 blocks access to directories from user 'apache'
+su -s /bin/sh apache -c "whoami"
+
+if json gives trouble try clearing cache Chrome
+64  systemctl status httpd.service
+  665  journalctl -xe
+  666  sudo journalctl -xe
+  667  sudo semanage fcontext -a -t httpd_sys_rw_content_t /var/www/mtDNA
+  668  sudo restorecon -RF /var/www/mtDNA
+  669  sudo apachectl restart
+  670  sudo journalctl -xe
+  671  setsebool -P httpd_unified 1
+  672  sudo  setsebool -P httpd_unified 1
+  673  sudo apachectl restart
+  674  history
+
+#chomd 700 .ssh/
+#chmod 600 authorized_keys
+
+/dev/mapper/centos-root   50G   15G   36G  30% /
+
+1440 jobs ( 25Mb job)
+
+index.pl => could not get executed in CentOs Apache2 -> We kept index.cgi
+Note that samtools version in MToolBox.sh is 1.3
+
+In production server 'data' is a symbolink link
+
+- The behaviour of upload_div differs in CentOS with respect Ubuntu.
+  - Centos we can dispaly if after submit-btn
+  - Ubuntu - we can't. We used display:none i+jQuery trick
+
+# when moved from "/" to /mtdna (reverse proxy) form action="." if not using Mojolicius
+# AloowOverride All affects the behaviour of divs in roman (uploading div does not work
+
+The same calculation can get slightly different results (see test/test.{1,2} 
+
+start.scripps.edu -> NOTHING WORKS - CHECK THAT 2TB is RUNNING
+                                   - check in sqs.pm that number maxqu = #cores
+roman.scripps.edu -> When you restart the machine teh first submission creates this message
+
+"17
+
+    Starting qseek daemon for www-data
+    on mrueda-ws1 at Fri Jan 13 16:21:48 PST 2017."
+
+So it's better to use head -1 instead of cat
+
+# IndexIgnore * to disable dir read from http
+
+# smtp.scripps.edu is the smtp server, if not configured right the emails will only work withn TSRI addresses.
+
+# Crontab daily at roman
+/etc/cron.daily

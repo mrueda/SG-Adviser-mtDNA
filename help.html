@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SG-ADVISER mtDNA Help Page</title>
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <link rev="made" href="mailto:mrueda%40scripps.edu">
+  <meta name="keywords" content=
+  "NGS mitochondrial annotation mtoolbox">
+  <meta name="author" content="Manuel Rueda">
+  <meta name="description" content=
+  "SG-ADVISER mtDNA: mitochondrial DNA annotation">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Le styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=
+        ".nav-collapse"></a> <a class="brand" href=
+        "http://localhost:82">SG-ADVISER mtDNA</a>
+
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="."><i class="icon-home icon-white"></i>Home</a></li>
+
+            </li>
+             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Run <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-header">Server</li>
+                                    <li><a href="./#start-using-it"><span class="icon-forward"></span> Start using it &raquo;</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Test-Job</li>
+                                    <li><a href="results/job/mtDNA_Test_Job"><span class="icon-eye-open"></span> Explore it &raquo;</a></li>
+                                </ul>
+            </li>
+
+            <li>
+              <a href="results/status">Status</a>
+            </li>
+
+            <li>
+              <a href="results/wellderly">Wellderly</a>
+            </li>
+
+            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-header">Help</li>
+                                    <li><a href="help.html"><span class="icon-question-sign"></span> Help Page</a>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">FAQs</li>
+                                    <li><a href="faq.html"><span class="icon-question-sign"></span> FAQs Page</a></a></li>
+                               </ul>
+           </li>
+
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle=
+              "dropdown">Links</a>
+
+              <ul class="dropdown-menu">
+                <li class="nav-header">Contact</li>
+
+                <li>
+                  <a href="mailto:mrueda@scripps.edu"><span class="icon-envelope"></span> Author</a>
+                </li>
+
+                <li class="nav-header">Corporate Info</li>
+
+                <li>
+                  <a href="http://www.scripps.edu"><span class="icon-home"></span> TSRI</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h4>Description</h4>
+
+    <p><strong>SG-ADVISER mtDNA</strong></p>
+    <p>SG-ADVISER mtDNA is a web-platform for the analysis, annotation and reporting of <strong>human mitochondrial DNA</strong> variants coming from NGS data. It is built on top of <a href="https://github.com/mitoNGS/MToolBox">MToolbox v.1.0</a> platform, a bioinformatics pipeline that reconstructs and analyzes human mitochondrial DNA from high throughput sequencing data.</p>
+    </br>
+
+    <h4>Citation</h4>
+
+    <p>Rueda M and Torkamani A, SG-ADVISER mtDNA: A web server for mitochondrial DNA annotation with data from 200 samples of a healty aging cohort. <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1778-6"> BMC Bioinformatics 2017 18:373</a></p>
+    </br>
+
+
+    <h4>Input Form</h4>
+
+    <p>The server uses <a href="https://en.wikipedia.org/wiki/SAM_(file_format)">SAM</a> / <a href="https://genome.ucsc.edu/goldenpath/help/bam.html">BAM</a> files as input. The SAM / BAM files must consist of <strong>mitochondrial DNA reads</strong>. In order to extract them from a WES of WGS alignment file you can execute this command (Linux):<br />
+    samtools view -b all.bam  chrM >  mtdna.bam <br />
+    or<br />
+    samtools view -b all.bam  MT   >  mtdna.bam <br />
+
+     You can obtain SAMtools from <a href="http://samtools.sourceforge.net">here</a>. Note that we will be aligning the reads again, thus, the reference genome used to create the SAM / BAM file is irrelevant. 
+    <p><strong>Nomenclature:</strong> The naming of the SAM / BAM files must have this format "sampleID.[bs]am" (alphanumeric plus underscores are accepted). </p>
+
+
+    <p>The user has two options for uploading mtDNA SAM / BAM files. The
+    first one is to upload individual samples. The second is to analyze a cohort by uploading all the SAM / BAM  files in a folder. The latter will create aggregated results that can be helpful in family analysis. To reduce the width of some columns, in cohort mode we will be displaying the <b>3 last characters</b> from the sampleID (e.g., "MA0123401P.bam" will be reduced to "01P"). Please rename your files accordingly if your plan is submitting cohorts.</p>
+
+    <ul>
+      <li><strong>Individual Sample:</strong> Select (or drag and
+      drop) a mtDNA SAM / BAM file in the corresponding form.
+      <br />
+      There is an <a href="http://stark.scripps.edu:82/results/job/mtDNA_Test_Job">example test job </a> that can be used to explore the type of results that you will be getting.
+     </li>
+
+      <li><strong>Cohort:</strong> Drag and drop the folder that
+      contains the SAM / BAM files (we recommend using <strong>Chrome web browser</strong>). </li>
+      <i>NB1:</i> Please do not mix SAM and BAM files in the same folder. Be consistent with the format.
+      <br />
+      <i>NB2:</i> Yet SG-ADVISER mtDNA allows for reading nested folders, we do not recommend it.
+    </ul>
+
+    <p> By default, SG-ADVISER mtDNA will assign an unique numeric indentifier to each job. Note that a job can contain multiple samples (i.e., from cohort mode).</p>
+    <p> Note that the data transfer is encrypted (SSL). The resuls will be deleted after a week. We will store metadata from each job (parameters used).
+
+    <p><b>Optional parameters</b></p>
+    <ul>
+      <li><strong>Your email:</strong> The calculation itself only takes a few minutes to complete. However, if the server is busy the waiting time could easily scalate to hours. If you add your email address we will be able to send you a notification when the job has finished. You will get an email from "genomics@scripps.edu" with a link to your results. If you do not add your email you will need to track the job yourself for completion.</li>
+      <li><strong>Private:</strong> If you set your job to private nobody but you will be able to access it.</li>
+      <li><strong>Job ID:</strong> You can especify a Job ID in here. It's a good idea to keep it short and only use text and numbers (underscore is OK). White spaces will be replaced by underscores.</li>
+        
+    </ul>
+    <hr>
+
+    <h4>Status Page</h4>
+
+    <p>Once the files have been uploaded to the server, SG-ADVISER mtDNA
+    assigns them to a queue system that launches the jobs sequentially.
+    In the Status page the jobs are displayed as a searchable HTML
+    table, whose columns can be re-ordered according to the user&#39;s
+    preference. The table consists of the following
+    fields:</p>
+
+     <ul>
+     <li><strong>Job ID:</strong> This field is the unique
+    identifier for the job. Note that samples sent together belong to
+    the same Job ID.</li>
+    <li><strong>Queue ID:</strong> This field corresponds to the number
+    assigned by the queue manager for each individual sample.</li>
+    <li><strong>Samples:</strong> This field indicates how many samples where uploaded on each job.</li>
+    <li><strong>SAM / BAM files:</strong> These are the names of the samples (sorted naturally).</li>
+    <li><strong>Date:</strong> The submission date for each job</li>
+    <li><strong>Status:</strong> Jobs can be in 4 different status: Queued,
+    Running, Finished or Failed.</li>
+    </ul>
+     <p> Note that the search box accepts regex e.g. "1483 (run|fai)".
+
+    <p><img border="0" src="img/help1.png"></p>
+
+    <hr>
+
+    <h4>Results Page</h4>
+
+    <p>If you click in a Finished sample, you will be redirected to the
+    Results page. The results are reported both as a HTML table and as downloadable files.</p>
+    
+    <p><strong>Downloadable</strong> files:</p>
+    <ul>
+    <li><strong>Info: </strong> A tsv (tabulator separated value) with information about the parameters used. Name of the file "info.txt".
+    </li>
+    <li>
+    <strong>Report: </strong> A tsv file including all the annotations for each variant. Name of the file "mit_prioritized_variants.txt".
+    </li>
+    <li>
+    <strong>Haplog: </strong> A tsv file including the predicted <a href="https://en.wikipedia.org/wiki/Human_mitochondrial_DNA_haplogroup">haplogroup</a> for each sample. Name of the file "mt_classification_best_results.csv".
+    </li>
+    <li>
+    <strong>VCF: </strong> A text file consisting of all the variants in the <a href="http://en.wikipedia.org/wiki/Variant_Call_Format">VCF</a> format. Name of the file "VCF_file.vcf".
+    </li>
+    </ul>
+
+    </br> 
+    <p><strong>HTML</strong> table:</p>
+
+    <p>In this tab SG-ADVISER mtDNA displays a browsable table consisting of the most relavant fields relative to the variant annotation:</p>
+
+     <ul>
+    <li><strong>Sample: </strong> The full name of each sample.
+    </li>
+    <li>
+    <strong>Locus: </strong> The location on the mitocohnodrial chromosome.
+    </li>
+    <li>
+    <strong>Variant_Allele: </strong> The position in the mitocondrial chromosome + the alternative allele</a> format.
+    </li>
+    <li>
+    <strong>Ref: </strong> The reference allele (mitochondrial reference genome: RSRS).
+    </li>
+    <li>
+    <strong>Alt: </strong> The alternative allele(s).
+    </li>
+      <li>
+    <strong>Aa_change: </strong> The amino acid change if the variant falls in a coding region.
+    </li>
+     <li>
+    <strong>GT: </strong> Genoytpe. 0:Ref, >=1:Alt(s).
+    </li>
+    <li>
+    <strong>Depth: </strong> The number of times this position is covered by reads.
+    </li>
+    <li>
+    <strong>Heterop_Frac: </strong> The heteroplasmic fraction. Note that the confidence interval can be retrieved from the downloadable VCF file.
+    </li>
+    <li>
+    <strong>Other: </strong> For other fields please consult MToolBox's <a href="https://github.com/mitoNGS/MToolBox/wiki/Output-files"> manual</a>.
+    </li>
+    </ul>
+
+
+
+    <p><img border="0" src="img/help2.png"></p>
+    <hr>
+
+            <h4>Wellderly Page</h4>
+<p>The results for the 200 individuals from our healthy aging cohort can be acceessed on the Menu (see above). The format is identical to that used for any other sample.
+    All the GenBank comparison in the accompanion paper was performed using data downloaded from <a href="https://www.mitomap.org/foswiki/bin/view/MITOMAP/Mitobank"> Mitobank</a>. The list of GenBank IDs used can be found <a href="https://www.mitomap.org/foswiki/pub/MITOMAP/Mitobank/genbank_ids_2016June25.csv"> here</a> and the raw data can be downloaded from <a href="https://www.mitomap.org/foswiki/pub/MITOMAP/Mitobank/Mitomap_Allele_Counts_2016_June25.zip"> Mitomap-link-1</a> and <a href="https://www.mitomap.org/foswiki/bin/view/MITOMAP/PolymorphismsCoding"> Mitomap-link-2</a>.
+<br />
+   The Job ID for the Wellderly samples can be found at the Supporting Info or <a href="wellderly_id.txt"> here</a>.
+</p>
+
+      <hr>
+
+
+    <h4>Background information</h4>
+
+    <p>SG-ADVISER mtDNA is built on top of <a href="https://github.com/mitoNGS/MToolBox">MToolbox v.1.0</a> and consists of the following steps:</p>
+
+    <ol>
+      <li>
+        <strong>Preprocessing of SAM / BAM files</strong>
+
+        <p>First thing we do is to convert SAM / BAM files into fastq files via Sam2Fastq.jar (<a href="https://broadinstitute.github.io/picard/">PicardTools suite)</a>.</p>
+      </li>
+
+      <li>
+        <strong>Alignment of the reads to a reference genome</strong>
+        <p> Then we use mapExome.py to map the reads onto RSRS (Reconstructed Sapiens Reference Sequence, PMID: 22482806) reference genome. The reads are aligned via <a href="http://research-pub.gene.com/gmap/">GSNAP</a> (GSNAP 2015-12-31.v7).
+        </p>
+      </li>
+
+      <li>
+        <strong>Variant calling and annotation</strong>
+                 <p>
+       Variant calling and annotation is performed through MToolBox. MToolbox is a bioinformatics pipeline to reconstruct and analyze human mitochondrial DNA from high throughput sequencing data. MToolBox performs haplogroup assignment and and prioritization analysis of mitochondrial variants. MToolBox also provides pathogenicity scores, profiles of genome variability and disease-associations for mitochondrial variants. These are the scripts used:</p>
+
+         <ul>
+<li>
+<em>SortSam.jar, MarkDuplicates.jar, SamFormatConverter.jar </em> (<a href="http://picard.sourceforge.net">PicardTools suite</a>) for SAM / BAM manipulation at several stages of the pipeline and elimination of PCR duplicates.</li>
+<li>
+<em>assembleMTgenome.py</em> to assemble the mitochondrial genome and perform variant calling and heteroplasmy quantification, by invoking:
+
+<ul>
+<li>
+<em>mpileup</em> (<a href="http://samtools.sourceforge.net">SAMtools</a>)</li>
+<li>
+<em>mtVariantCaller.py</em> module;</li>
+<li>
+<em>VCFoutput.py</em> to report variants in the VCF file (version 4.0). It invokes the vcf module (<a href="https://github.com/jamescasbon/PyVCF">PyVCF</a> release 0.60);</li>
+<li>
+<em>mt-classifier.py</em> for haplogroup prediction;</li>
+<li>
+<em>variants_functional_annotation.py</em> for functional annotation;</li>
+<li>
+<em>prioritization.py</em> for variant prioritization;</li>
+<li>
+<em>summary.py</em> to report statistics about coverage of reconstructed genomes, predicted haplogroups, number of homoplasmic, heteroplasmic and prioritized variants.</li>
+</ul>
+</li>
+</ul>
+      </li>
+<br />
+    <li>
+        <strong>Data display</strong>
+         <p> SG-ADVISER mtDNA transforms the output into a format (JSON) that is rendered in the form of HTML tables.</p>
+    </li>
+
+     </ol>
+        <hr>
+
+       <h4>Submitting multiple jobs from the command-line</h4>
+<p id="web-services">Apart from a standalone calculation, we envision that some users may wish to use the <i>command-line</i> to run the calculation in many samples.
+We are providing a <a href="https://github.com/mrueda/SG-ADVISER-mtDNA">Perl script</a> implemented using the LWP library (installed by default in most Linux distributions and Mac OS) for job submission as well as a <a href="https://github.com/mrueda/SG-ADVISER-mtDNA">bash script</a> for downloading of the result upon completion. The <i>command-line</i> results will be also stored and accessible through a web browser at <b>https://genomics.scripps.edu/mtdna/results/jobid</b>, where <i>JobId</i> is the identification number of the job.
+<br />
+</p>
+<p>
+If you have any specific question, or found a bug, please contact the author at <i>mrueda@scripps.edu</i>. 
+</p>
+
+      <hr>
+
+      <h4>References</h4>
+      <ol>
+        <li>
+          Calabrese C, Simone D, Diroma MA, Santorsola M, Guttà C, Gasparre G, Picardi E, Pesole G, Attimonelli M. MToolBox: a highly automated pipeline for heteroplasmy annotation and prioritization analysis of human mitochondrial variants in high-throughput sequencing. Bioinformatics. 2014 Nov 1;30(21):3115-7. <a href="https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu483">Paper here</a>.
+        </li>
+      </ol>
+      <hr>
+
+
+
+    <footer>
+      <p>&copy; 2017 Scripps Research | U.S.A.</p>
+    </footer>
+  </div><!-- /container -->
+  <script src="js/jquery.min.js">
+</script> <script src="js/bootstrap.min.js">
+</script> 
+</body>
+</html>
